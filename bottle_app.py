@@ -1,4 +1,5 @@
 from bottle import get, post, template, request, response, redirect
+import os
 
 ON_PYTHONANYWHERE = "PYTHONANYWHERE_DOMAIN" in os.environ.keys()
 
@@ -9,9 +10,9 @@ else:
     from bottle import run, debug
 
 @get('/')
-def_home():
+def home():
     return template('home')
 
 @get('/about')
-def_about():
+def about():
     return template('about')
