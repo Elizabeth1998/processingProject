@@ -9,6 +9,12 @@ if ON_PYTHONANYWHERE:
 else:
     from bottle import run, debug
 
+if ON_PYTHONANYWHERE:
+    application = default_app()
+else:
+    debug(True)
+    run(host="localhost", port=8080)
+
 @get('/')
 def home():
     return template('templates/home')
