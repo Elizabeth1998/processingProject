@@ -1,57 +1,36 @@
-
 var bx;
-
 var by;
-
 var boxSize;
-
 var overBox;
-
 var locked;
-
 var xOffset;
-
 var yOffset;
-
 var circleXL, circleYL, circleXR, circleYR;
-
 var rectXM, rectYM;
-
 var rectSize;
-
 var mouth;
-
 var pupilXL, pupilYL, pupilXR, pupilYR;
-
 var pupil;
-
 var circleSize;
-
 var rectX1, rectY1, rectX2, rectY2, rectX3, rectY3;
-
 var colorSquare;
-
 var overBoxOne;
-
 var overBoxTwo;
-
 var overBoxThree;
-
 var rectColor;
-
 var circleColor;
-
 var baseColor;
-
 var mouthColor;
-
 var pupilColor;
-
 var firstColor;
-
 var secondColor;
-
 var thirdColor;
+
+let s0 = 'Welcome to Charile the Chore Checker!';
+let s1 = 'This is Charile. Feel free to move him around the page.';
+let s2 = 'To learn more about him visit: ';
+let s3 ='http://elizabethhutchison68.pythonanywhere.com/about ';
+
 
 function setup() {
     initializeFields();
@@ -82,10 +61,13 @@ function setup() {
     rectY2 = height / 2 - 30;
     rectX3 = width / 2 - 250;
     rectY3 = height / 2 + 40;
+  
+
+
 }
 
 function draw() {
-    background(0);
+    background(255);
     // Test if the cursor is over the box
     if (mouseX > bx - boxSize && mouseX < bx + boxSize && mouseY > by - boxSize && mouseY < by + boxSize) {
         overBox = true;
@@ -98,6 +80,10 @@ function draw() {
         fill(153);
         overBox = false;
     }
+  fill(50);
+  textSize(30);
+  text(s0, 180, 10, 300, 100); // Text wraps within text box
+  
     // Draw the box
     fill(rectColor);
     rect(bx, by, boxSize, boxSize);
@@ -110,12 +96,18 @@ function draw() {
     fill(pupilColor);
     ellipse(pupilXL, pupilYL, pupil, pupil);
     ellipse(pupilXR, pupilYR, pupil, pupil);
-    fill(firstColor);
-    rect(rectX1, rectY1, colorSquare, colorSquare);
-    fill(secondColor);
-    rect(rectX2, rectY2, colorSquare, colorSquare);
-    fill(thirdColor);
-    rect(rectX3, rectY3, colorSquare, colorSquare);
+  
+  fill(50);
+  textSize(20);
+  text(s1,100,260,500,100);
+  
+  fill(50);
+  textSize(20);
+  text(s2,190,280,500,100);
+  
+  fill(50);
+  textSize(20);
+  text(s3,100,300,500,100);
 }
 
 function mousePressed() {

@@ -5,7 +5,6 @@
         <meta charset="utf-8"/>
     </head>
     <body>
-        <h1>Move him around!</h1>
         <script src="/static/move.js"></script>
     </body>
 </html>

@@ -11,8 +11,8 @@ else:
 
 @get('/')
 def home():
-    return template('home')
+    return template('templates/home')
 
 @get('/about')
 def about():
-    return template('about')
+    return template('templates/about')

@@ -1,57 +1,36 @@
-
 var bx;
-
 var by;
-
 var boxSize;
-
 var overBox;
-
 var locked;
-
 var xOffset;
-
 var yOffset;
-
 var circleXL, circleYL, circleXR, circleYR;
-
 var rectXM, rectYM;
-
 var rectSize;
-
 var mouth;
-
 var pupilXL, pupilYL, pupilXR, pupilYR;
-
 var pupil;
-
 var circleSize;
-
 var rectX1, rectY1, rectX2, rectY2, rectX3, rectY3;
-
 var colorSquare;
-
 var overBoxOne;
-
 var overBoxTwo;
-
 var overBoxThree;
-
 var rectColor;
-
 var circleColor;
-
 var baseColor;
-
 var mouthColor;
-
 var pupilColor;
-
 var firstColor;
-
 var secondColor;
-
 var thirdColor;
+
+let s0 = 'When you complete tasks you earn points that unlock new colors!';
+let s1 = 'Click on a color to change Charile';
+let s2 = 'To start earn points, login and';
+let s3 = 'create and complete tasks on your account. ';
+
 
 function setup() {
     initializeFields();
@@ -85,8 +64,12 @@ function setup() {
 }
 
 function draw() {
-    background(0);
-    // Draw the box
+    background(255);
+    
+  fill(50);
+  textSize(30);
+  text(s0, 120, 5, 500, 400); // Text wraps within text box
+  
     fill(rectColor);
     rect(bx, by, boxSize, boxSize);
     fill(mouthColor);
@@ -134,6 +117,18 @@ function draw() {
     rect(rectX2, rectY2, colorSquare, colorSquare);
     fill(thirdColor);
     rect(rectX3, rectY3, colorSquare, colorSquare);
+  
+  fill(50);
+  textSize(20);
+  text(s1,180,260,500,100);
+  
+  fill(50);
+  textSize(20);
+  text(s2,200,280,500,100);
+  
+  fill(50);
+  textSize(20);
+  text(s3,150,300,500,100);
 }
 
 function mousePressed() {
